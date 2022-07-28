@@ -5,9 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f5f5f4;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* .dropdown-menu{
+  display: hidden;
+} */
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* 
+Note: you can also do this with Tailwind's group-hover. Unfortunately Tailwind CDN version does not include this variant, so you will have to adjust the tailwind.config.js file in your own project.
+
+Example with group-hover: https://codesandbox.io/s/tailwind-dropdown-with-group-hover-gm9k9
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
