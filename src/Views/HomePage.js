@@ -14,7 +14,7 @@ const HomePage = () => {
     try {
       const response = await get_all_products();
       console.log(response.data, "products");
-      return response.data;
+      return response.data.products;
     } catch (error) {
       console.log(error);
       return toast.error("Something went wrong", {
@@ -33,7 +33,7 @@ const HomePage = () => {
     try {
       const response = await get_all_categories();
       console.log(response.data, "categories");
-      return response.data;
+      return response.data.categories;
     } catch (error) {
       console.log(error);
       return toast.error("Something went wrong", {
@@ -140,7 +140,7 @@ const HomePage = () => {
                 Select Category
               </option>
               {allCategories &&
-                allCategories.map((cat, index, array) => (
+                allCategories?.map((cat, index, array) => (
                   <option value={cat.name} key={cat.id}>
                     {cat.name}
                   </option>

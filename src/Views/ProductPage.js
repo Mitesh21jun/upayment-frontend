@@ -13,7 +13,7 @@ const ProductPage = () => {
     try {
       const response = await get_product_by_id({ id: id });
       console.log(response.data);
-      return response.data;
+      return response.data.product;
     } catch (error) {
       console.log(error);
       return toast.error("Something went wrong", {

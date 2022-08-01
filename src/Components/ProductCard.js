@@ -7,7 +7,7 @@ export const ProductCard = ({ data }) => {
   return (
     <div
       onClick={() => {
-        navigate(`/product/${data.id}`, { state: { id: data.id } });
+        navigate(`/product/${data._id}`, { state: { id: data._id } });
         //   <Link to={`/article/${post.objectID}`} />
       }}
     >

@@ -36,7 +36,7 @@ const DeleteProduct = () => {
     try {
       const response = await get_all_products();
       console.log(response.data, "products");
-      return response.data;
+      return response.data.products;
     } catch (error) {
       console.log(error);
       return toast.error("Something went wrong", {
